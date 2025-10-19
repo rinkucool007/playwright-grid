@@ -6,6 +6,12 @@ This project is configured to run Playwright tests **ONLY** through Selenium Gri
 
 - Selenium Grid must be running at `http://localhost:4444`
 - Chrome browser nodes must be available in the Grid
+```
+java -jar selenium-server-4.36.0.jar hub
+```
+```
+java -jar selenium-server-4.36.0.jar node --detect-drivers true --publish-events tcp://localhost:4442 --subscribe-events tcp://localhost:4443
+```
 
 ## Check Grid Status
 
@@ -70,3 +76,4 @@ After tests complete:
 ```powershell
 npx playwright show-report
 ```
+
