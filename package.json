@@ -1,0 +1,27 @@
+{
+  "name": "proj",
+  "version": "1.0.0",
+  "description": "Playwright tests running exclusively on Selenium Grid",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:grid": "playwright test",
+    "test:headed": "cross-env HEADLESS=false playwright test",
+    "test:headless": "cross-env HEADLESS=true playwright test",
+    "report": "playwright show-report",
+    "check:grid": "echo Checking Grid status... && curl http://localhost:4444/status"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.8.1",
+    "@types/selenium-webdriver": "^4.35.1",
+    "cross-env": "^10.1.0"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.37.0"
+  }
+}
